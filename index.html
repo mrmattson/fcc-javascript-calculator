@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FCC - JS Calc</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="skeleton.css" type="text/css">
+</head>
+<body>
+
+    <!-- .container is main centered wrapper -->
+    <div class="container">
+
+        <!-- columns should be the immediate child of a .row -->
+        <div class="row">
+            <h1>Javascript Calculator</h1>
+        </div>
+
+        <div class="row">
+            <div id="output">0</div>
+            <div id="operation">0</div>
+        </div>
+
+        <div class="row">
+            <button id="ac">AC</button>
+            <button id="ce">CE</button>
+            <button id="div">÷</button>
+            <button id="mul">x</button>
+        </div>
+        <div class="row">
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="sub">-</button>
+        </div>
+        <div class="row">
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="plu">+</button>
+        </div>
+        <div class="row">
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="equ">=</button>
+        </div>
+        <div class="row">
+            <button id="zero">0</button>
+            <button id="decimal">.</button>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+    var addNumber = function (event) {
+        var num = this.innerText;
+        console.log(num + ' button pressed');
+        document.getElementById('output').innerHTML = num;
+    };
+
+    function autorun()
+    {
+        var zero = document.getElementById('zero', addNumber);
+        var one = document.getElementById('one', addNumber);
+        var two = document.getElementById('two', addNumber);
+        var three = document.getElementById('three', addNumber);
+        var four = document.getElementById('four', addNumber);
+        var five = document.getElementById('five', addNumber);
+        var six = document.getElementById('six', addNumber);
+        var seven = document.getElementById('seven', addNumber);
+        var eight = document.getElementById('eight', addNumber);
+        var nine = document.getElementById('nine', addNumber);
+
+        zero.addEventListener('click', addNumber)
+        one.addEventListener('click', addNumber)
+        two.addEventListener('click', addNumber)
+        three.addEventListener('click', addNumber)
+        four.addEventListener('click', addNumber)
+        five.addEventListener('click', addNumber)
+        six.addEventListener('click', addNumber)
+        seven.addEventListener('click', addNumber)
+        eight.addEventListener('click', addNumber)
+        nine.addEventListener('click', addNumber)
+    }
+    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+    else window.onload = autorun;
+    </script>
+</body>
+</html>
