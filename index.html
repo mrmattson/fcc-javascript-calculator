@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>FCC - JS Calc</title>
-    <link rel="stylesheet" href="normalize.css" type="text/css">
-    <link rel="stylesheet" href="skeleton.css" type="text/css">
+    <link rel="stylesheet" href="src/normalize.css" type="text/css">
+    <link rel="stylesheet" href="src/skeleton.css" type="text/css">
 </head>
 <body>
 
@@ -22,71 +22,36 @@
         </div>
 
         <div class="row">
-            <button id="ac">AC</button>
-            <button id="ce">CE</button>
-            <button id="div">÷</button>
-            <button id="mul">x</button>
+            <button class="calc-button" id="acb">AC</button>
+            <button class="calc-button" id="ceb">CE</button>
+            <button class="calc-button" id="div">÷</button>
+            <button class="calc-button" id="mul">x</button>
         </div>
         <div class="row">
-            <button id="seven">7</button>
-            <button id="eight">8</button>
-            <button id="nine">9</button>
-            <button id="sub">-</button>
+            <button class="calc-button" id="sev">7</button>
+            <button class="calc-button" id="eig">8</button>
+            <button class="calc-button" id="nin">9</button>
+            <button class="calc-button" id="sub">-</button>
         </div>
         <div class="row">
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="six">6</button>
-            <button id="plu">+</button>
+            <button class="calc-button" id="fou">4</button>
+            <button class="calc-button" id="fiv">5</button>
+            <button class="calc-button" id="six">6</button>
+            <button class="calc-button" id="plu">+</button>
         </div>
         <div class="row">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button id="equ">=</button>
+            <button class="calc-button" id="one">1</button>
+            <button class="calc-button" id="two">2</button>
+            <button class="calc-button" id="thr">3</button>
+            <button class="calc-button" id="equ">=</button>
         </div>
         <div class="row">
-            <button id="zero">0</button>
-            <button id="decimal">.</button>
+            <button class="calc-button" id="zer">0</button>
+            <button class="calc-button" id="dec">.</button>
         </div>
 
     </div>
 
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript">
-    var addNumber = function (event) {
-        var num = this.innerText;
-        console.log(num + ' button pressed');
-        document.getElementById('output').innerHTML = num;
-    };
-
-    function autorun()
-    {
-        var zero = document.getElementById('zero', addNumber);
-        var one = document.getElementById('one', addNumber);
-        var two = document.getElementById('two', addNumber);
-        var three = document.getElementById('three', addNumber);
-        var four = document.getElementById('four', addNumber);
-        var five = document.getElementById('five', addNumber);
-        var six = document.getElementById('six', addNumber);
-        var seven = document.getElementById('seven', addNumber);
-        var eight = document.getElementById('eight', addNumber);
-        var nine = document.getElementById('nine', addNumber);
-
-        zero.addEventListener('click', addNumber)
-        one.addEventListener('click', addNumber)
-        two.addEventListener('click', addNumber)
-        three.addEventListener('click', addNumber)
-        four.addEventListener('click', addNumber)
-        five.addEventListener('click', addNumber)
-        six.addEventListener('click', addNumber)
-        seven.addEventListener('click', addNumber)
-        eight.addEventListener('click', addNumber)
-        nine.addEventListener('click', addNumber)
-    }
-    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
-    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
-    else window.onload = autorun;
-    </script>
+    <script type="text/javascript" src="src/app.js"></script>
 </body>
 </html>
